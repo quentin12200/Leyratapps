@@ -15,8 +15,9 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 const appsPerso = [
-  { name: 'Suivi Addiction', url: 'https://suiviaddiction.vercel.app/login', icon: '🧠', desc: '' },
-  { name: 'Callisthéni', url: 'https://callistheni-leyrat.vercel.app/', icon: '💪', desc: '' },
+  { name: 'Suivi Addiction', url: 'https://suiviaddiction.vercel.app/login', icon: '🧠' },
+  { name: 'Callisthéni', url: 'https://callistheni-leyrat.vercel.app/', icon: '💪' },
+  { name: 'Chez Nous', url: 'https://chez-nous-bebc1.web.app/auth', icon: '🏠' },
 ];
 
 const appsMilitantisme = [
@@ -35,7 +36,6 @@ function renderCards(apps, containerId) {
     a.innerHTML = `
       <span class="card-icon">${app.icon}</span>
       <span class="card-name">${app.name}</span>
-      ${app.desc ? `<span class="card-desc">${app.desc}</span>` : ''}
     `;
     container.appendChild(a);
   });
