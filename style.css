@@ -1,0 +1,155 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0f0f1a;
+  --surface: #1a1a2e;
+  --surface2: #16213e;
+  --accent-perso: #e94560;
+  --accent-mil: #0f3460;
+  --accent-mil-light: #533483;
+  --text: #eaeaea;
+  --text-muted: #888;
+  --radius: 16px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 0 16px;
+}
+.header-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.install-btn {
+  background: var(--accent-perso);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.install-btn:hover { opacity: 0.85; }
+.hidden { display: none !important; }
+
+/* MAIN */
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* SECTIONS */
+.section {}
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid;
+}
+.section--perso .section-title {
+  color: var(--accent-perso);
+  border-color: var(--accent-perso);
+}
+.section--militantisme .section-title {
+  color: var(--accent-mil-light);
+  border-color: var(--accent-mil-light);
+}
+
+/* CARDS GRID */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+/* CARD */
+.card {
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.05);
+  min-height: 110px;
+  justify-content: center;
+}
+.card:active, .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.section--perso .card:hover { border-color: var(--accent-perso); }
+.section--militantisme .card:hover { border-color: var(--accent-mil-light); }
+
+.card-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.card-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+}
+.card-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+.card--placeholder {
+  opacity: 0.35;
+  border-style: dashed;
+  cursor: default;
+}
+.card--placeholder:hover { transform: none; }
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 16px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* Mobile safe area */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .main { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+}

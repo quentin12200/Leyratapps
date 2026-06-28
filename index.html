@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <meta name="description" content="LeyratApps - Hub de mes applications" />
+  <title>LeyratApps</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <span class="logo">⚡ LeyratApps</span>
+      <button id="installBtn" class="install-btn hidden">Installer l'app</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- SECTION PERSONNELLE -->
+    <section class="section section--perso">
+      <h2 class="section-title">👤 Personnel</h2>
+      <div class="cards" id="persoCards">
+        <!-- Les cartes seront ajoutées ici -->
+        <div class="card card--placeholder">
+          <span class="card-icon">+</span>
+          <span class="card-name">Vos apps arrivent…</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION MILITANTISME -->
+    <section class="section section--militantisme">
+      <h2 class="section-title">✊ Militantisme</h2>
+      <div class="cards" id="militantismeCards">
+        <!-- Les cartes seront ajoutées ici -->
+        <div class="card card--placeholder">
+          <span class="card-icon">+</span>
+          <span class="card-name">Vos apps arrivent…</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Quentin Leyrat · 2026</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
