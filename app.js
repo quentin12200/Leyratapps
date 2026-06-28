@@ -14,17 +14,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// ── DONNÉES DES APPS ─────────────────────────────────────────────
-// Ajoute tes liens ici quand tu es prêt
 const appsPerso = [
-  // { name: 'Mon App', url: 'https://...', icon: '🏠', desc: 'Description' },
+  { name: 'Suivi Addiction', url: 'https://suiviaddiction.vercel.app/login', icon: '🧠', desc: '' },
+  { name: 'Callisthéni', url: 'https://callistheni-leyrat.vercel.app/', icon: '💪', desc: '' },
 ];
 
 const appsMilitantisme = [
-  // { name: 'Outil militant', url: 'https://...', icon: '✊', desc: 'Description' },
 ];
 
-// ── RENDU DES CARTES ─────────────────────────────────────────────
 function renderCards(apps, containerId) {
   const container = document.getElementById(containerId);
   if (!apps.length) return;
@@ -47,7 +44,6 @@ function renderCards(apps, containerId) {
 renderCards(appsPerso, 'persoCards');
 renderCards(appsMilitantisme, 'militantismeCards');
 
-// ── PWA INSTALL PROMPT ────────────────────────────────────────────
 let deferredPrompt;
 const installBtn = document.getElementById('installBtn');
 
@@ -70,7 +66,6 @@ window.addEventListener('appinstalled', () => {
   deferredPrompt = null;
 });
 
-// ── SERVICE WORKER ────────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(console.error);
 }
