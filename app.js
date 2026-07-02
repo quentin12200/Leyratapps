@@ -2,13 +2,13 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/fireba
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyALbpxe9DaS-fwNVrVLrehmT6hFRhn5z9k",
-  authDomain: "leyratapps.firebaseapp.com",
-  projectId: "leyratapps",
-  storageBucket: "leyratapps.firebasestorage.app",
-  messagingSenderId: "644472339356",
-  appId: "1:644472339356:web:ef8b59d8d07057cc8c2659",
-  measurementId: "G-MMW3HPMHN4"
+  apiKey: "AIzaSyDDx0GsdfRv6pLfc0-5NqephNAb6pJuRP0",
+  authDomain: "leyrat-24ccd.firebaseapp.com",
+  projectId: "leyrat-24ccd",
+  storageBucket: "leyrat-24ccd.firebasestorage.app",
+  messagingSenderId: "117693567549",
+  appId: "1:117693567549:web:5e65620e6d80423e74d054",
+  measurementId: "G-73F04HG8EB"
 };
 
 const app = initializeApp(firebaseConfig);
